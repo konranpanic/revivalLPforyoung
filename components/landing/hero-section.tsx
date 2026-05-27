@@ -92,7 +92,7 @@ export function HeroSection() {
 
             {/* CTA Button */}
             <a
-              href="#cta-section"
+              href="https://revival.tokyo/products/list?category_id=&name=ヴィトン"
               className="group relative inline-flex items-center overflow-hidden bg-primary px-10 py-4 text-sm font-semibold tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90"
             >
               <span className="relative z-10">限定コレクションを見る</span>
