@@ -4,10 +4,10 @@ import { useState, useEffect, useRef } from "react"
 
 // 画像パスを修正してください（実際のファイル名に合わせてください）
 const thumbnails = [
-  { id: 1, label: "正面全体", src: "/public/product-171/1.jpeg" },
-  { id: 2, label: "底面・角スレ", src: "/public/product-171/2.jpeg" },
-  { id: 3, label: "内側・シリアル", src: "/public/product-171/3.jpeg" },
-  { id: 4, label: "金具拡大", src: "/public/product-171/4.jpeg" },
+  { id: 1, label: "正面全体", src: "/product-171/1.jpeg" },
+  { id: 2, label: "底面・角スレ", src: "/product-171/2.jpeg" },
+  { id: 3, label: "内側・シリアル", src: "/product-171/3.jpeg" },
+  { id: 4, label: "金具拡大", src: "/product-171/4.jpeg" },
 ]
 
 const specs = [
