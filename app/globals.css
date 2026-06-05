@@ -209,7 +209,7 @@ html {
 @layer components {
   .luxury-fixed-bg {
     /* モバイル・PC共通の基本設定 */
-    background-image: url('/background-image.jpg'); /* ご自身の画像ファイル名にしてください */
+    background-image: url('/background.png'); /* ご自身の画像ファイル名にしてください */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
