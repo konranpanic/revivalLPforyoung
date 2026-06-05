@@ -1,29 +1,26 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Briefcase, Shirt, UtensilsCrossed } from "lucide-react"
+import Image from "next/image"
 
 const styles = [
   {
-    icon: Briefcase,
+    image: "/style/style-office.jpg", // ご自身の画像パスに変更してください
     number: "01",
     title: "上品で信頼感を醸し出す「オフィスカジュアル」",
-    description:
-      "毎日の通勤スタイル、カチッとしたトレンチコートやテーラードジャケットのスタイルに、この「アルマ」を片手で持つだけで、全体の見栄えがガラリと変わります。お仕事のシーンで大切な「清潔感」と「信頼感」を、バッグ1つで周囲にさりげなくアピール。",
+    description: "毎日の通勤スタイル、カチッとしたトレンチコートやテーラードジャケットのスタイルに、この「アルマ」を片手で持つだけで、全体の見栄えがガラリと変わります。お仕事のシーンで大切な「清潔感」と「信頼感」を、バッグ1つで周囲にさりげなくアピール。",
   },
   {
-    icon: Shirt,
+    image: "/style/style-casual.jpg",
     number: "02",
     title: "大人のこなれ感を演出する「休日のきれいめデニム」",
-    description:
-      "ハイブランドだからといって、ドレスアップした格好だけに合わせる必要はありません。実は、ラフなデニムスタイルやシンプルな白Tシャツといったカジュアルな服装に合わせるのこそが、今っぽくて非常にお洒落です。モノグラムの上品さがカジュアルさを程よく引き締めます。",
+    description: "ハイブランドだからといって、ドレスアップした格好だけに合わせる必要はありません。実は、ラフなデニムスタイルやシンプルな白Tシャツといったカジュアルな服装に合わせるのこそが、今っぽくて非常にお洒落です。モノグラムの上品さがカジュアルさを程よく引き締めます。",
   },
   {
-    icon: UtensilsCrossed,
+    image: "/style/style-dinner.jpg",
     number: "03",
     title: "格式高い場所でも気後れしない「特別な日のディナー」",
-    description:
-      "もちろん、ホテルでのランチ会や記念日のディナー、結婚式の二次会、お子様の入卒園式など、フォーマルな席でも主役級の存在感を発揮します。「このバッグさえ持っていけば間違いない」という絶対的な安心感が手に入ります。",
+    description: "もちろん、ホテルでのランチ会や記念日のディナー、結婚式の二次会、お子様の入卒園式など、フォーマルな席でも主役級の存在感を発揮します。「このバッグさえ持っていけば間違いない」という絶対的な安心感が手に入ります。",
   },
 ]
 
@@ -57,7 +54,7 @@ export function StyleGuideSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative border-b border-border/50 bg-card py-24 md:py-32"
+      className="relative border-b border-border/50 bg-transparent py-24 md:py-32" // bg-transparentに変更
     >
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
@@ -70,21 +67,20 @@ export function StyleGuideSection() {
             あなただけの一生モノ
           </h2>
           <div className="mx-auto mt-6 h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />
-          <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            ルイ・ヴィトンのアルマは、驚くほど現代のライフスタイルに自然に溶け込み、毎日のコーディネートの主役になってくれます。
-          </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
           {styles.map((style, index) => (
             <div key={index} className="style-card group opacity-0">
-              <div className="relative h-full overflow-hidden border border-border/50 bg-background transition-all duration-500 hover:border-primary/30">
-                {/* Image Placeholder */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-secondary/50">
-                  <div className="flex h-full flex-col items-center justify-center">
-                    <style.icon className="mb-2 h-12 w-12 text-primary/30 transition-transform duration-500 group-hover:scale-110" />
-                    <span className="text-xs tracking-wider text-muted-foreground">Style {style.number}</span>
-                  </div>
+              <div className="relative h-full overflow-hidden border border-border/50 bg-background/50 backdrop-blur-sm transition-all duration-500 hover:border-primary/30">
+                {/* Image Section */}
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={style.image}
+                    alt={style.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
                 </div>
