@@ -18,20 +18,21 @@ export function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "glass border-b border-primary/20 py-3"
-          : "bg-transparent py-5"
+          ? "glass border-b border-primary/20 py-2"
+          : "bg-transparent py-3"
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
-        {/* Logo Section */}
+        {/* Logo Section - 画像を大きく表示 */}
         <a href="https://revival.tokyo/" className="block transition-opacity hover:opacity-80">
           <Image
             src="/logo.png"
             alt="Revival.tokyo"
-            width={300}
-            height={90}
-            className="h-auto w-auto max-h-28 object-contain"
+            width={600}
+            height={200}
+            className="h-auto w-[250px] md:w-[320px] object-contain"
             priority
+            sizes="(max-width: 768px) 250px, 320px"
           />
         </a>
 
