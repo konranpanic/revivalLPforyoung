@@ -125,13 +125,16 @@ export function CtaSection() {
               同じコンディションの次回入荷は完全未定です
             </p>
 
-            {/* CTA Button */}
-            <button className="group relative mb-8 w-full max-w-md overflow-hidden bg-primary px-8 py-5 text-base font-semibold tracking-[0.1em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 md:text-lg">
+            {/* CTA Button (リンク設定済み) */}
+            <a
+              href="https://revival.tokyo/products/detail/171" 
+              className="group relative mb-8 inline-flex w-full max-w-md items-center justify-center overflow-hidden bg-primary px-8 py-5 text-base font-semibold tracking-[0.1em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 md:text-lg"
+            >
               <span className="relative z-10">
                 この特別なルイ・ヴィトンを購入する
               </span>
               <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-            </button>
+            </a>
 
             {/* Link */}
             <a
