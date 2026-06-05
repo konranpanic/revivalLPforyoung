@@ -8,15 +8,16 @@ export function Footer() {
 
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center gap-8">
-          {/* Logo (画像に差し替え) */}
+          {/* Logo */}
           <div className="text-center">
-            <a href="/" className="inline-block transition-opacity hover:opacity-80">
+            {/* リンク先を https://revival.tokyo/ に設定しました */}
+            <a href="https://revival.tokyo/" className="inline-block transition-opacity hover:opacity-80">
               <Image
                 src="/logo.png"
                 alt="Revival.tokyo"
-                width={200}
-                height={60}
-                className="h-auto w-auto max-h-12 object-contain"
+                width={400}
+                height={120}
+                className="h-auto w-[280px] object-contain"
                 priority
               />
             </a>
