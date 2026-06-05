@@ -139,7 +139,7 @@ html { scroll-behavior: smooth; }
 
   @media (max-width: 767px) {
     .luxury-fixed-bg {
-      background-image: url('/background-sp.jpg');
+      background-image: url('/background-sp.png');
       background-size: cover;
       background-position: center;
       background-attachment: scroll;
