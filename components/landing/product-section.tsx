@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react"
 
-// 画像パスを修正してください（実際のファイル名に合わせてください）
 const thumbnails = [
   { id: 1, label: "正面全体", src: "/product-171/1.jpeg" },
   { id: 2, label: "底面・角スレ", src: "/product-171/2.jpeg" },
@@ -44,7 +43,7 @@ export function ProductSection() {
     <section
       id="product"
       ref={sectionRef}
-      className="relative border-b border-border/50 bg-card py-24 md:py-32"
+      className="relative border-b border-border/50 bg-transparent py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
@@ -60,27 +59,24 @@ export function ProductSection() {
         <div className="product-content grid gap-12 opacity-0 lg:grid-cols-2">
           {/* Gallery */}
           <div>
-            {/* Main Image */}
-            <div className="relative mb-4 overflow-hidden border border-border/50 bg-background p-4">
-              <div className="aspect-square bg-secondary/50">
+            <div className="relative mb-4 overflow-hidden border border-border/50 bg-background/50 backdrop-blur-sm p-4">
+              <div className="aspect-square bg-secondary/30">
                 <img 
                   src={thumbnails.find((t) => t.id === activeThumb)?.src}
                   alt={thumbnails.find((t) => t.id === activeThumb)?.label}
                   className="h-full w-full object-cover"
                 />
               </div>
-              {/* Corner Accents */}
               <div className="absolute left-0 top-0 h-8 w-8 border-l border-t border-primary/30" />
               <div className="absolute bottom-0 right-0 h-8 w-8 border-b border-r border-primary/30" />
             </div>
 
-            {/* Thumbnails */}
             <div className="grid grid-cols-4 gap-3">
               {thumbnails.map((thumb) => (
                 <button
                   key={thumb.id}
                   onClick={() => setActiveThumb(thumb.id)}
-                  className={`aspect-square border bg-background p-1 transition-all duration-300 ${
+                  className={`aspect-square border bg-background/50 p-1 transition-all duration-300 ${
                     activeThumb === thumb.id
                       ? "border-primary"
                       : "border-border/50 hover:border-primary/50"
@@ -99,7 +95,7 @@ export function ProductSection() {
             </span>
 
             <h3 className="mb-4 font-serif text-3xl font-light tracking-wide text-foreground">
-              トロター　ショルダーバッグ
+              トロター ショルダーバッグ
             </h3>
 
             <div className="mb-8 flex items-baseline gap-3 border-b border-border/50 pb-6">
@@ -114,19 +110,28 @@ export function ProductSection() {
             </p>
 
             {/* Specs Table */}
-            <div className="overflow-hidden border border-border/50">
+            <div className="mb-8 overflow-hidden border border-border/50 bg-background/50 backdrop-blur-sm">
               {specs.map((spec, index) => (
                 <div
                   key={index}
                   className={`flex ${index !== specs.length - 1 ? "border-b border-border/50" : ""}`}
                 >
-                  <div className="w-2/5 bg-secondary/30 p-4 text-xs font-medium text-muted-foreground">
+                  <div className="w-2/5 bg-primary/5 p-4 text-xs font-medium text-muted-foreground">
                     {spec.label}
                   </div>
                   <div className="flex-1 p-4 text-sm text-foreground">{spec.value}</div>
                 </div>
               ))}
             </div>
+
+            {/* CTA Button */}
+            <a
+              href="https://revival.tokyo/products/detail/171" 
+              className="group relative inline-flex w-full items-center justify-center overflow-hidden border border-primary bg-primary/10 px-8 py-4 text-sm font-semibold tracking-[0.1em] text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
+            >
+              <span className="relative z-10">商品詳細を見る</span>
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+            </a>
           </div>
         </div>
       </div>
