@@ -34,10 +34,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      {/* luxury-fixed-bg が背景画像を固定します */}
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased luxury-fixed-bg`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         
-        {/* 全体を包む半透明レイヤー */}
+        {/* 【修正】背景専用の固定レイヤーをbody直下に分離 */}
+        <div className="fixed inset-0 -z-10 luxury-fixed-bg" />
+        
+        {/* コンテンツの背後にあった半透明レイヤーを調整 */}
         <div className="min-h-screen bg-background/50">
           {children}
         </div>
