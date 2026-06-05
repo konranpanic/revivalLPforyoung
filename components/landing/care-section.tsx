@@ -56,7 +56,7 @@ export function CareSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative border-b border-border/50 bg-background py-24 md:py-32"
+      className="relative border-b border-border/50 bg-background/0 py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
