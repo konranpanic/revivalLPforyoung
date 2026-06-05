@@ -196,10 +196,32 @@ html {
 }
 
 /* Luxury Background Fixed */
-.luxury-fixed-bg {
-  background-image: url('/background.png'); /* ※publicフォルダ内のファイル名に合わせてください */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .luxury-fixed-bg {
+    /* モバイル・PC共通の基本設定 */
+    background-image: url('/background-image.jpg'); /* ご自身の画像ファイル名にしてください */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* モバイルではスクロールに追従（これで崩れが直ります） */
+    background-attachment: scroll;
+  }
+
+  /* 画面幅 768px (iPad/PC) 以上で背景を固定 */
+  @media (min-width: 768px) {
+    .luxury-fixed-bg {
+      background-attachment: fixed;
+    }
+  }
 }
