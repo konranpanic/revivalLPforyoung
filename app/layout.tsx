@@ -14,8 +14,8 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Louis Vuitton Premium Selection | Revival.tokyo',
-  description: '誰もが一度は憧れる世界のトップブランド、ルイ・ヴィトン。100%本物保証のプレミアムリユース品を厳選してお届けします。',
+  title: '初めてのルイ・ヴィトン（Louis Vuitton）探しはRevivalで｜100%鑑定済みの一生モノを',
+  description: '初めてのブランドバッグにルイ・ヴィトンを選びませんか？Revivalでは、プロが厳選した状態の良いヴィンテージ品のみを100%本物保証で販売。中古品に不安がある方も安心のサポート体制で、あなたの「はじめての第一歩」を丁寧にサポートします。',
   generator: 'v0.app',
   icons: {
     icon: [
