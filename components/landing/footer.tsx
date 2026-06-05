@@ -13,7 +13,7 @@ export function Footer() {
             {/* リンク先を https://revival.tokyo/ に設定しました */}
             <a href="https://revival.tokyo/" className="inline-block transition-opacity hover:opacity-80">
               <Image
-                src="/logo.png"
+                src="/logo2.png"
                 alt="Revival.tokyo"
                 width={400}
                 height={120}
