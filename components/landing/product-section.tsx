@@ -11,10 +11,10 @@ const thumbnails = [
 ]
 
 const specs = [
-  { label: "型番（Model No.）", value: "M51130" },
+  { label: "型番（Model No.）", value: "M51240" },
   { label: "シリアル（Serial No.）", value: "FL0015（フランス製造）" },
-  { label: "サイズ（Size）", value: "横幅32cm × 高さ24cm × マチ幅17cm" },
-  { label: "付属品（Accessories）", value: "ルイ・ヴィトン純正パドロック、鍵×1、純正保存袋" },
+  { label: "サイズ（Size）", value: "横幅23cm × 高さ13cm × マチ幅7cm" },
+  { label: "付属品（Accessories）", value: "ルイ・ヴィトン純正保存袋" },
 ]
 
 export function ProductSection() {
@@ -99,18 +99,18 @@ export function ProductSection() {
             </span>
 
             <h3 className="mb-4 font-serif text-3xl font-light tracking-wide text-foreground">
-              モノグラム アルマPM
+              トロター　ショルダーバッグ
             </h3>
 
             <div className="mb-8 flex items-baseline gap-3 border-b border-border/50 pb-6">
               <span className="font-serif text-4xl font-semibold tracking-wider text-foreground">
-                ¥148,000
+                ¥180,000
               </span>
               <span className="text-sm text-muted-foreground">（税込）</span>
             </div>
 
             <p className="mb-8 text-sm leading-relaxed text-muted-foreground">
-              数あるアルマの中でも、状態の良い個体を厳選しました。ヌメ革のエイジングが程よく上品なライトブラウンに育っており、ヴィンテージらしいこなれた高級感を演出してくれます。ファーストヴィトンとして、そのままお出かけに使える素晴らしいコンディションです。
+              数ある商品の中でも、状態の良い個体を厳選しました。ヌメ革のエイジングが程よく上品なライトブラウンに育っており、ヴィンテージらしいこなれた高級感を演出してくれます。ファーストヴィトンとして、そのままお出かけに使える素晴らしいコンディションです。
             </p>
 
             {/* Specs Table */}

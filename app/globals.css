@@ -194,3 +194,12 @@ html {
   background: rgba(212, 175, 55, 0.3);
   color: #f4e4bc;
 }
+
+/* Luxury Background Fixed */
+.luxury-fixed-bg {
+  background-image: url('/background.png'); /* ※publicフォルダ内のファイル名に合わせてください */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
