@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { Sparkles, Shield, Truck } from "lucide-react"
+import Image from "next/image"
 
 export function HeroSection() {
   const contentRef = useRef<HTMLDivElement>(null)
@@ -26,7 +27,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <header className="relative min-h-screen overflow-hidden bg-background/0">
+    <header className="relative min-h-screen overflow-hidden bg-transparent">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -109,15 +110,14 @@ export function HeroSection() {
 
               {/* Image Container */}
               <div className="relative aspect-[4/5] overflow-hidden bg-secondary">
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                <div className="flex h-full items-center justify-center">
-                  <div className="text-center">
-                    <div className="mb-4 font-serif text-6xl text-primary/20">LV</div>
-                    <p className="text-xs tracking-[0.3em] text-muted-foreground">
-                      PREMIUM COLLECTION
-                    </p>
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10" />
+                <Image
+                  src="/topimage.png"
+                  alt="Louis Vuitton Collection"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
 
               {/* Floating Badge */}
