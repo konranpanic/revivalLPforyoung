@@ -22,7 +22,7 @@ const problems = [
 
 export function ProblemsSection() {
   return (
-    <section className="bg-background/10 py-24 md:py-32">
+    <section className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         
         {/* 画像エリア */}
