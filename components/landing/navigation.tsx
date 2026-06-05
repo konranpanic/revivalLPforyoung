@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
@@ -22,14 +23,19 @@ export function Navigation() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
-        <div className="flex flex-col">
-          <span className="font-serif text-xl font-semibold tracking-[0.2em] text-foreground md:text-2xl">
-            Revival.tokyo
-          </span>
-          <span className="hidden text-[10px] tracking-wider text-primary/80 md:block">
-            PREMIUM BRAND SELECTION
-          </span>
-        </div>
+        {/* Logo Section */}
+        <a href="https://revival.tokyo/" className="block transition-opacity hover:opacity-80">
+          <Image
+            src="/logo.png"
+            alt="Revival.tokyo"
+            width={300}
+            height={90}
+            className="h-auto w-auto max-h-10 object-contain"
+            priority
+          />
+        </a>
+
+        {/* Links */}
         <div className="hidden items-center gap-8 md:flex">
           <a
             href="#product"
@@ -44,6 +50,7 @@ export function Navigation() {
             PURCHASE
           </a>
         </div>
+        
         <a
           href="#cta-section"
           className="luxury-border bg-transparent px-6 py-2.5 text-xs font-medium tracking-[0.15em] text-primary transition-all hover:bg-primary/10"
