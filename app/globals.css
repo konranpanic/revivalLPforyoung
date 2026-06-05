@@ -139,12 +139,13 @@ html { scroll-behavior: smooth; }
 
   @media (max-width: 767px) {
     .luxury-fixed-bg {
-      background-image: url('/background-sp.jpg'); /* 提供いただいたJPG画像を指定 */
-      background-size: auto 100%;
-      background-position: center center;
+      background-image: url('/background-sp.jpg');
+      background-size: cover;
+      background-position: center;
       background-attachment: scroll;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
+      /* ブラウザ側のぼやけ防止処理 */
+      -webkit-backface-visibility: hidden;
+      transform: translateZ(0);
     }
   }
 }
