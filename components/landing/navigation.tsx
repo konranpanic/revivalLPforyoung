@@ -18,21 +18,21 @@ export function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "glass border-b border-primary/20 py-2"
-          : "bg-transparent py-3"
+          ? "glass border-b border-primary/20 py-0"
+          : "bg-transparent py-0.5"
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
-        {/* Logo Section - 画像を大きく表示 */}
+        {/* Logo Section - ネガティブマージンで上下の余白を強制的に消去 */}
         <a href="https://revival.tokyo/" className="block transition-opacity hover:opacity-80">
           <Image
             src="/logo.png"
             alt="Revival.tokyo"
             width={600}
             height={200}
-            className="h-auto w-[250px] md:w-[320px] object-contain"
+            // -my-2 で上下に食い込ませ、h-[64px]で高さを確保
+            className="h-[64px] w-auto object-contain -my-2"
             priority
-            sizes="(max-width: 768px) 250px, 320px"
           />
         </a>
 
