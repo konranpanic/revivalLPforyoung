@@ -29,25 +29,25 @@ export function Footer() {
           {/* Links */}
           <div className="flex flex-wrap justify-center gap-8">
             <a
-              href="#"
+              href="https://revival.tokyo/help/about"
               className="text-xs tracking-wider text-muted-foreground transition-colors hover:text-primary"
             >
               会社概要
             </a>
             <a
-              href="#"
+              href="https://revival.tokyo/help/privacy"
               className="text-xs tracking-wider text-muted-foreground transition-colors hover:text-primary"
             >
               プライバシーポリシー
             </a>
             <a
-              href="#"
+              href="https://revival.tokyo/help/tradelaw"
               className="text-xs tracking-wider text-muted-foreground transition-colors hover:text-primary"
             >
               特定商取引法に基づく表記
             </a>
             <a
-              href="#"
+              href="https://revival.tokyo/contact"
               className="text-xs tracking-wider text-muted-foreground transition-colors hover:text-primary"
             >
               お問い合わせ
