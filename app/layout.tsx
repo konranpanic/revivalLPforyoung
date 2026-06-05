@@ -19,18 +19,9 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
     ],
     apple: '/apple-icon.png',
   },
@@ -42,9 +33,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja" className="bg-background">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
-        {children}
+    <html lang="ja">
+      {/* luxury-fixed-bg が背景画像を固定します */}
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased luxury-fixed-bg`}>
+        
+        {/* 全体を包む半透明レイヤー */}
+        <div className="min-h-screen bg-background/85">
+          {children}
+        </div>
+
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
