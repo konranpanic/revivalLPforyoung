@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export function Footer() {
   return (
     <footer className="relative border-t border-border/30 bg-secondary py-16">
@@ -6,11 +8,18 @@ export function Footer() {
 
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center gap-8">
-          {/* Logo */}
+          {/* Logo (画像に差し替え) */}
           <div className="text-center">
-            <span className="font-serif text-2xl font-semibold tracking-[0.2em] text-foreground">
-              Revival.tokyo
-            </span>
+            <a href="/" className="inline-block transition-opacity hover:opacity-80">
+              <Image
+                src="/logo.png"
+                alt="Revival.tokyo"
+                width={200}
+                height={60}
+                className="h-auto w-auto max-h-12 object-contain"
+                priority
+              />
+            </a>
             <p className="mt-2 text-[10px] tracking-[0.3em] text-primary/60">
               PREMIUM BRAND SELECTION
             </p>
