@@ -56,6 +56,25 @@ export function ProductSection() {
           <div className="mx-auto mt-6 h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />
         </div>
 
+        {/* 信頼のテキストブロックを追加 */}
+        <div className="mb-16 rounded-xl border border-primary/20 bg-primary/5 p-8 text-center">
+          <h3 className="mb-6 font-serif text-lg text-foreground">なぜRevivalが「初めてのヴィトン」に選ばれるのか</h3>
+          <div className="grid gap-8 md:grid-cols-3">
+            <div>
+              <p className="mb-2 font-bold text-primary">全品鑑定済み</p>
+              <p className="text-xs text-muted-foreground">独自の厳しい鑑定基準をクリアした正規品のみを販売。偽物の心配はゼロです。</p>
+            </div>
+            <div>
+              <p className="mb-2 font-bold text-primary">厳選された美品</p>
+              <p className="text-xs text-muted-foreground">ヌメ革のエイジングが美しい、ヴィンテージの魅力をそのまま楽しめる個体だけを厳選。</p>
+            </div>
+            <div>
+              <p className="mb-2 font-bold text-primary">安心のサポート</p>
+              <p className="text-xs text-muted-foreground">初めての中古購入でも迷わないよう、コンディションを丁寧に解説。購入後も親身にサポート。</p>
+            </div>
+          </div>
+        </div>
+
         <div className="product-content grid gap-12 opacity-0 lg:grid-cols-2">
           {/* Gallery */}
           <div>
@@ -109,7 +128,6 @@ export function ProductSection() {
               数ある商品の中でも、状態の良い個体を厳選しました。ヌメ革のエイジングが程よく上品なライトブラウンに育っており、ヴィンテージらしいこなれた高級感を演出してくれます。ファーストヴィトンとして、そのままお出かけに使える素晴らしいコンディションです。
             </p>
 
-            {/* Specs Table */}
             <div className="mb-8 overflow-hidden border border-border/50 bg-background/50 backdrop-blur-sm">
               {specs.map((spec, index) => (
                 <div
@@ -124,7 +142,6 @@ export function ProductSection() {
               ))}
             </div>
 
-            {/* CTA Button */}
             <a
               href="https://revival.tokyo/products/detail/171" 
               className="group relative inline-flex w-full items-center justify-center overflow-hidden border border-primary bg-primary/10 px-8 py-4 text-sm font-semibold tracking-[0.1em] text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
@@ -135,6 +152,35 @@ export function ProductSection() {
           </div>
         </div>
       </div>
+
+      {/* FAQ構造化データ（Google向け） */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "中古のルイ・ヴィトンを買うのは初めてで不安です。偽物ではありませんか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Revivalでは独自の厳しい真贋鑑定基準をクリアした商品のみを厳選して販売しております。100%本物保証ですので、安心してお買い求めいただけます。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "中古品の状態はどのように評価されていますか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Revivalではヌメ革のエイジングや金具の状態など、ヴィンテージ品としての美しさを独自のランク基準で丁寧に評価しています。初めての方でも安心して選べるよう、状態を詳細に解説しています。"
+                }
+              }
+            ]
+          })
+        }}
+      />
     </section>
   )
 }
