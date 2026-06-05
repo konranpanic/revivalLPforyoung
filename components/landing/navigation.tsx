@@ -26,7 +26,7 @@ export function Navigation() {
         {/* Logo Section - ネガティブマージンで上下の余白を強制的に消去 */}
         <a href="https://revival.tokyo/" className="block transition-opacity hover:opacity-80">
           <Image
-            src="/logo.png"
+            src="/logo2.png"
             alt="Revival.tokyo"
             width={600}
             height={200}
