@@ -197,7 +197,7 @@ html {
 
 /* Luxury Background Fixed */
 .luxury-fixed-bg {
-  background-image: url('/background-image.jpg'); /* ※publicフォルダ内のファイル名に合わせてください */
+  background-image: url('/background.png'); /* ※publicフォルダ内のファイル名に合わせてください */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
