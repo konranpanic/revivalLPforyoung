@@ -112,7 +112,7 @@ export function HeroSection() {
               <div className="relative aspect-[4/5] overflow-hidden bg-secondary">
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10" />
                 <Image
-                  src="/hero-image.jpg"
+                  src="/topimage.jpg"
                   alt="Louis Vuitton Collection"
                   fill
                   className="object-cover"
