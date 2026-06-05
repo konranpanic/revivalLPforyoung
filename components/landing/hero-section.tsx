@@ -26,7 +26,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <header className="relative min-h-screen overflow-hidden bg-background">
+    <header className="relative min-h-screen overflow-hidden bg-background/0">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
