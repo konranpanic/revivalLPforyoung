@@ -56,7 +56,7 @@ export function ProductSection() {
           <div className="mx-auto mt-6 h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />
         </div>
 
-        {/* 信頼のテキストブロックを追加 */}
+        {/* 信頼のテキストブロック */}
         <div className="mb-16 rounded-xl border border-primary/20 bg-primary/5 p-8 text-center">
           <h3 className="mb-6 font-serif text-lg text-foreground">なぜRevivalが「初めてのヴィトン」に選ばれるのか</h3>
           <div className="grid gap-8 md:grid-cols-3">
@@ -82,7 +82,7 @@ export function ProductSection() {
               <div className="aspect-square bg-secondary/30">
                 <img 
                   src={thumbnails.find((t) => t.id === activeThumb)?.src}
-                  alt={thumbnails.find((t) => t.id === activeThumb)?.label}
+                  alt={`ルイ・ヴィトン ${thumbnails.find((t) => t.id === activeThumb)?.label}｜Revival厳選ヴィンテージ`}
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -101,7 +101,7 @@ export function ProductSection() {
                       : "border-border/50 hover:border-primary/50"
                   }`}
                 >
-                  <img src={thumb.src} alt={thumb.label} className="h-full w-full object-cover" />
+                  <img src={thumb.src} alt={`ルイ・ヴィトン ${thumb.label} - Revival厳選個体`} className="h-full w-full object-cover" />
                 </button>
               ))}
             </div>
