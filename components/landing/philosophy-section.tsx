@@ -27,7 +27,7 @@ export function PhilosophySection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-background py-32 md:py-40"
+      className="relative overflow-hidden bg-background/10 py-32 md:py-40"
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
