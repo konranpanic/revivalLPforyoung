@@ -38,7 +38,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased luxury-fixed-bg`}>
         
         {/* 全体を包む半透明レイヤー */}
-        <div className="min-h-screen bg-background/85">
+        <div className="min-h-screen bg-background/50">
           {children}
         </div>
 
