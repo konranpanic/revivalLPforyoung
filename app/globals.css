@@ -95,51 +95,30 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply min-h-screen bg-background text-foreground;
   }
 }
 
 /* Custom Animations */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
+.animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
 
 .animate-shimmer {
-  background: linear-gradient(
-    90deg,
-    var(--gold-dark) 0%,
-    var(--gold-light) 50%,
-    var(--gold-dark) 100%
-  );
+  background: linear-gradient(90deg, var(--gold-dark) 0%, var(--gold-light) 50%, var(--gold-dark) 100%);
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
   -webkit-background-clip: text;
@@ -147,81 +126,41 @@
   background-clip: text;
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
+.animate-float { animation: float 6s ease-in-out infinite; }
 
-/* Glass Effect */
-.glass {
-  background: rgba(26, 21, 19, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
-/* Gold Gradient Text */
-.gold-gradient-text {
-  background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 50%, #b8860b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Luxury Border */
-.luxury-border {
-  position: relative;
-}
-
+/* Glass Effect & Luxury Styles */
+.glass { background: rgba(26, 21, 19, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+.gold-gradient-text { background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 50%, #b8860b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.luxury-border { position: relative; }
 .luxury-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 1px;
+  content: ''; position: absolute; inset: 0; padding: 1px;
   background: linear-gradient(135deg, #d4af37, #f4e4bc, #b8860b);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
 }
+html { scroll-behavior: smooth; }
+::selection { background: rgba(212, 175, 55, 0.3); color: #f4e4bc; }
 
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Selection Color */
-::selection {
-  background: rgba(212, 175, 55, 0.3);
-  color: #f4e4bc;
-}
-
-/* Luxury Background Fixed */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply min-h-screen bg-background text-foreground;
-  }
-}
-
 @layer components {
   .luxury-fixed-bg {
-    /* モバイル・PC共通の基本設定 */
-    background-image: url('/background.png'); /* ご自身の画像ファイル名にしてください */
+    /* PC用画像のデフォルト設定 */
+    background-image: url('/background-pc.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    /* モバイルではスクロールに追従（これで崩れが直ります） */
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
 
-  /* 画面幅 768px (iPad/PC) 以上で背景を固定 */
-  @media (min-width: 768px) {
+  /* 画面幅 767px 以下（スマホ） */
+  @media (max-width: 767px) {
     .luxury-fixed-bg {
-      background-attachment: fixed;
+      background-image: url('/background-sp.png'); /* ここにスマホ用画像パスを指定 */
+      background-attachment: scroll; /* スクロール追従で固定崩れを防ぐ */
     }
   }
 }
