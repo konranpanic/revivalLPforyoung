@@ -34,8 +34,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
-        <div className="min-h-screen bg-background/85">
+      {/* 1. luxury-fixed-bg クラスを追加 */}
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased luxury-fixed-bg`}>
+        
+        {/* 2. 全体を半透明の背景色レイヤーで包む */}
+        <div className="min-h-screen bg-background/50">
+          {children}
+        </div>
+
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
+    </html>
+  )
+}      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
+        <div className="min-h-screen bg-background/50">
           {children}
         </div>
         {process.env.NODE_ENV === 'production' && <Analytics />}
