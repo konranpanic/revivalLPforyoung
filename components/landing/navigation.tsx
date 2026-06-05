@@ -30,7 +30,7 @@ export function Navigation() {
             alt="Revival.tokyo"
             width={300}
             height={90}
-            className="h-auto w-auto max-h-14 object-contain"
+            className="h-auto w-auto max-h-28 object-contain"
             priority
           />
         </a>
