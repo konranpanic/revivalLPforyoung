@@ -4,47 +4,47 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Youthful Neon Theme Colors */
-  --background: oklch(0.10 0.08 212);
-  --foreground: oklch(0.98 0.02 100);
-  --card: oklch(0.16 0.06 236);
-  --card-foreground: oklch(0.97 0.03 100);
-  --popover: oklch(0.14 0.05 218);
-  --popover-foreground: oklch(0.98 0.02 100);
-  --primary: oklch(0.75 0.34 175);
-  --primary-foreground: oklch(0.05 0.02 80);
-  --secondary: oklch(0.75 0.28 340);
-  --secondary-foreground: oklch(0.98 0.02 100);
-  --muted: oklch(0.40 0.08 210);
-  --muted-foreground: oklch(0.80 0.05 95);
-  --accent: oklch(0.90 0.38 345);
-  --accent-foreground: oklch(0.98 0.02 100);
-  --destructive: oklch(0.62 0.55 20);
-  --destructive-foreground: oklch(0.98 0.02 100);
-  --border: oklch(0.25 0.12 210);
-  --input: oklch(0.16 0.06 210);
-  --ring: oklch(0.75 0.34 175);
-  --chart-1: oklch(0.78 0.26 176);
-  --chart-2: oklch(0.80 0.28 340);
-  --chart-3: oklch(0.36 0.07 236);
-  --chart-4: oklch(0.14 0.04 220);
-  --chart-5: oklch(0.90 0.38 340);
+  /* White-base Youthful Theme Colors */
+  --background: #ffffff;
+  --foreground: #0f172a; /* slate-900 */
+  --card: #f8fafc; /* gray-50 */
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #06b6d4; /* cyan-500 */
+  --primary-foreground: #ffffff;
+  --secondary: #ec4899; /* pink-500 */
+  --secondary-foreground: #ffffff;
+  --muted: #f1f5f9; /* gray-100 */
+  --muted-foreground: #475569; /* slate-600 */
+  --accent: #7c3aed; /* violet-600 */
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444; /* red-500 */
+  --destructive-foreground: #ffffff;
+  --border: #e6eef7; /* soft border */
+  --input: #ffffff;
+  --ring: rgba(6,182,212,0.25);
+  --chart-1: #06b6d4;
+  --chart-2: #ec4899;
+  --chart-3: #7c3aed;
+  --chart-4: #60a5fa;
+  --chart-5: #34d399;
   --radius: 0.75rem;
-  --sidebar: oklch(0.14 0.05 216);
-  --sidebar-foreground: oklch(0.98 0.02 100);
-  --sidebar-primary: oklch(0.75 0.34 175);
-  --sidebar-primary-foreground: oklch(0.05 0.02 80);
-  --sidebar-accent: oklch(0.75 0.28 340);
-  --sidebar-accent-foreground: oklch(0.98 0.02 100);
-  --sidebar-border: oklch(0.25 0.12 210);
-  --sidebar-ring: oklch(0.75 0.34 175);
-  
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #06b6d4;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ec4899;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e6eef7;
+  --sidebar-ring: rgba(6,182,212,0.18);
+
   /* Custom Youth Colors */
-  --neon-cyan: oklch(0.80 0.34 175);
-  --neon-magenta: oklch(0.75 0.28 340);
-  --neon-pink: oklch(0.90 0.38 345);
-  --neon-blue: oklch(0.36 0.07 236);
-  --surface: oklch(0.14 0.05 216);
+  --neon-cyan: #06b6d4;
+  --neon-magenta: #ec4899;
+  --neon-pink: #ff77a9;
+  --neon-blue: #60a5fa;
+  --surface: #ffffff;
 }
 
 @theme inline {
@@ -110,8 +110,8 @@
 }
 .animate-float { animation: float 6s ease-in-out infinite; }
 
-.glass { background: rgba(10, 18, 42, 0.72); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
-.gold-gradient-text { background: linear-gradient(135deg, #3af5ff 0%, #e748ff 45%, #ff5cbb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.glass { background: rgba(255,255,255,0.72); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(15,23,42,0.04); }
+.gold-gradient-text { background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-magenta) 45%, var(--neon-pink) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .luxury-border { position: relative; overflow: hidden; }
 .luxury-border::before {
   content: ''; position: absolute; inset: 0; padding: 1px;
@@ -121,7 +121,7 @@
   -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
 }
 html { scroll-behavior: smooth; }
-::selection { background: rgba(212, 175, 55, 0.3); color: #f4e4bc; }
+::selection { background: rgba(6,182,212,0.18); color: #0f172a; }
 
 @tailwind base;
 @tailwind components;
