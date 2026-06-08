@@ -20,10 +20,10 @@ export default function LandingPage() {
       <ProblemsSection />
       <SupportSection />
       <ReasonsSection />
+      <StyleGuideSection />
       <PhilosophySection />
       <ProductSection />
       <ConditionSection />
-      <StyleGuideSection />
       <CareSection />
       <FaqSection />
       <CtaSection />
