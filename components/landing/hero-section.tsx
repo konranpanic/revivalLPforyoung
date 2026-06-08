@@ -27,23 +27,19 @@ export function HeroSection() {
   }, [])
 
   return (
-    <header className="relative min-h-screen overflow-hidden bg-background">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div
-          className="h-full w-full"
-          style={{
-            backgroundImage: `radial-gradient(circle at 20% 20%, rgba(6,182,212,0.12) 0%, transparent 32%), radial-gradient(circle at 80% 15%, rgba(236,72,153,0.12) 0%, transparent 28%), radial-gradient(circle at 50% 80%, rgba(124,58,237,0.08) 0%, transparent 24%)`,
-          }}
+    <header className="relative min-h-screen overflow-hidden">
+      {/* 背景写真エリア */}
+      <div className="absolute inset-0">
+        <Image
+          src="/resort-bg.png" // publicフォルダ内の写真パス
+          alt="Resort Chill Background"
+          fill
+          className="object-cover object-center"
+          priority
         />
+        {/* 背景を明るくするための白いオーバーレイ */}
+        <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]" />
       </div>
-
-      {/* Soft Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-cyan-50/50" />
-
-      {/* Decorative Elements */}
-      <div className="absolute right-10 top-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-      <div className="absolute left-12 bottom-24 h-52 w-52 rounded-full bg-secondary/10 blur-3xl" />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-28">
         <div
@@ -51,12 +47,12 @@ export function HeroSection() {
           className="grid items-center gap-12 opacity-0 lg:grid-cols-2 lg:gap-16"
         >
           <div className="order-2 text-center lg:order-1 lg:text-left">
-            <span className="mb-6 inline-block rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold uppercase tracking-[0.35em] text-primary">
+            <span className="mb-6 inline-block rounded-full border border-primary/20 bg-white/60 px-4 py-2 text-sm font-semibold uppercase tracking-[0.35em] text-primary shadow-sm">
               NEW VINTAGE MOOD
             </span>
 
             <h1 className="mb-6 text-4xl font-extrabold leading-snug tracking-tight text-foreground md:text-6xl lg:text-7xl">
-              <span className="block bg-gradient-to-r from-cyan-400 via-sky-400 to-rose-400 bg-clip-text text-transparent leading-tight">
+              <span className="block bg-gradient-to-r from-cyan-600 to-rose-500 bg-clip-text text-transparent leading-tight">
                 憧れを、もっと身近に。
               </span>
               <span className="block mt-2 text-3xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
@@ -65,7 +61,7 @@ export function HeroSection() {
               </span>
             </h1>
 
-            <p className="mb-8 max-w-xl text-base leading-relaxed text-slate-600 lg:text-lg">
+            <p className="mb-8 max-w-xl text-base leading-relaxed text-slate-700 lg:text-lg bg-white/30 p-4 rounded-xl">
               厳選されたリユースアイテムを、あなたの毎日に。高価すぎない価格と、はじめてでも安心のサポートで、いま欲しい憧れを手に入れよう。
             </p>
 
@@ -77,10 +73,10 @@ export function HeroSection() {
               ].map((badge, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-4 py-2.5 shadow-sm"
+                  className="flex items-center gap-2 rounded-full border border-white/50 bg-white/80 px-4 py-2.5 shadow-sm"
                 >
                   <badge.icon className="h-4 w-4 text-primary" />
-                  <span className="text-xs tracking-wider text-slate-600">
+                  <span className="text-xs tracking-wider text-slate-800">
                     {badge.text}
                   </span>
                 </div>
@@ -90,24 +86,17 @@ export function HeroSection() {
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-start">
               <a
                 href="https://revival.tokyo/products/list?category_id=&name=ヴィトン"
-                aria-label="コレクションを見る - Revivalのルイ・ヴィトン一覧ページへ移動"
-                className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/30"
+                className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-4 text-sm font-semibold text-white shadow-lg transition duration-300 hover:bg-primary/90"
               >
                 今すぐアイテムを見る
-              </a>
-              <a
-                href="#product"
-                className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-8 py-4 text-sm font-semibold text-slate-700 transition duration-300 hover:border-primary hover:text-primary focus:outline-none focus:ring-4 focus:ring-primary/20"
-              >
-                おすすめを見る
               </a>
             </div>
           </div>
 
-          {/* Image Section */}
+          {/* 右側のメイン画像も以前の通り配置 */}
           <div className="order-1 lg:order-2">
-            <div className="relative mx-auto w-full max-w-lg overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_40px_120px_rgba(15,23,42,0.08)]">
-              <div className="relative aspect-[4/5] overflow-hidden bg-slate-100">
+            <div className="relative mx-auto w-full max-w-lg overflow-hidden rounded-[2rem] border-4 border-white shadow-2xl">
+              <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src="/topimage.png"
                   alt="Louis Vuitton Collection"
@@ -116,21 +105,7 @@ export function HeroSection() {
                   priority
                 />
               </div>
-              <div className="absolute -bottom-3 left-6 rounded-3xl bg-white/90 px-5 py-4 shadow-sm">
-                <p className="text-xs uppercase tracking-[0.25em] text-slate-400">Best Seller</p>
-                <p className="mt-1 text-lg font-semibold text-foreground">今だけの1点</p>
-              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-[10px] tracking-[0.3em] text-slate-400">
-              SCROLL
-            </span>
-            <div className="h-12 w-px bg-gradient-to-b from-primary/50 to-transparent" />
           </div>
         </div>
       </div>
