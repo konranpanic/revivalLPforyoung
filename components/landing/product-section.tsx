@@ -49,29 +49,34 @@ export function ProductSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
           <span className="mb-4 inline-block font-serif text-xs tracking-[0.4em] text-primary">
-            ITEM DETAIL
+            ITEM LIST
           </span>
           <h2 className="font-serif text-2xl font-light tracking-wide text-foreground md:text-3xl">
-            本日の厳選お取り扱い商品
+            ヴィトン中心＋バッグ・財布・小物まで
+            <br className="md:hidden" />
+            種類が豊富なラインナップ
           </h2>
+          <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            人気のルイ・ヴィトンを中心に、財布や小物も含めて多彩にご用意。はじめての一品選びにぴったりの、安心できるコレクションです。
+          </p>
           <div className="mx-auto mt-6 h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />
         </div>
 
         {/* 信頼のテキストブロック */}
         <div className="mb-16 rounded-xl border border-primary/20 bg-primary/5 p-8 text-center">
-          <h3 className="mb-6 font-serif text-lg text-foreground">なぜRevivalが「初めてのヴィトン」に選ばれるのか</h3>
+          <h3 className="mb-6 font-serif text-lg text-foreground">初めてでも安心できる信頼の理由</h3>
           <div className="grid gap-8 md:grid-cols-3">
             <div>
-              <p className="mb-2 font-bold text-primary">全品鑑定済み</p>
-              <p className="text-xs text-muted-foreground">独自の厳しい鑑定基準をクリアした正規品のみを販売。偽物の心配はゼロです。</p>
+              <p className="mb-2 font-bold text-primary">取引数 1,200件以上</p>
+              <p className="text-xs text-muted-foreground">若者に選ばれた実績。はじめてでも頼れる、多くの購入者が信頼しています。</p>
             </div>
             <div>
-              <p className="mb-2 font-bold text-primary">厳選された美品</p>
-              <p className="text-xs text-muted-foreground">ヌメ革のエイジングが美しい、ヴィンテージの魅力をそのまま楽しめる個体だけを厳選。</p>
+              <p className="mb-2 font-bold text-primary">満足度 97%</p>
+              <p className="text-xs text-muted-foreground">丁寧な商品説明と品質保証で、高評価をいただいています。</p>
             </div>
             <div>
-              <p className="mb-2 font-bold text-primary">安心のサポート</p>
-              <p className="text-xs text-muted-foreground">初めての中古購入でも迷わないよう、コンディションを丁寧に解説。購入後も親身にサポート。</p>
+              <p className="mb-2 font-bold text-primary">豊富なカテゴリ</p>
+              <p className="text-xs text-muted-foreground">バッグ・財布・小物まで、選べる幅が広いから初めてでも安心です。</p>
             </div>
           </div>
         </div>

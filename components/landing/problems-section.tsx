@@ -1,22 +1,25 @@
 "use client"
 
 import Image from 'next/image'
-import { AlertCircle, Target, Search } from "lucide-react"
+import { AlertCircle, Target, Search } from 'lucide-react'
 
 const problems = [
   {
-    title: "インターネットでの高額な購入は、本当に本物かどうか不安...",
-    description: "フリマアプリや安価なECサイトが増えた現代だからこそ、「もし偽物だったらどうしよう」「騙されたら取り返しが出ない」と、一歩を踏み出せない方が非常に増えています。",
+    title: 'ハイブランドって高すぎる、手が届かない...',
+    description:
+      '新品価格にため息をついているあなたへ。リユースなら憧れブランドをもっと現実的な価格で手に入れられます。',
     icon: AlertCircle,
   },
   {
-    title: "たくさん種類がありすぎてどれを選べば失敗しない？",
-    description: "せっかく大きな買い物をするのだから、一時の流行で終わるものではなく、何年、何十年経っても色褪せない、自分の年齢に寄り添ってくれる「本当に価値のある定番」を知りたい。",
+    title: '初めてで失敗したくない、ちゃんと選びたい。',
+    description:
+      '本当に安心できるものを選ぶには、プロの鑑定や状態チェックが必要です。Revivalなら初めてでも納得できるサポート体制があります。',
     icon: Target,
   },
   {
-    title: "中古品やリユース品だと、傷や汚れの状態が分かりにくい",
-    description: "「届いてみたら想像以上に使い込まれていた…」なんて失敗は絶対に避けたいもの。言葉だけの「美品」ではなく、細かいディテールまで納得のいく買い物をしたい。",
+    title: '見た目だけじゃなく、信頼できるかが大事。',
+    description:
+      '見えない不安をなくすため、写真や説明だけでなく、真贋鑑定済み・状態開示で安心して選べる環境を整えています。',
     icon: Search,
   },
 ]
@@ -25,7 +28,6 @@ export function ProblemsSection() {
   return (
     <section className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
-        
         {/* 画像エリア */}
         <div className="relative h-[380px] w-full overflow-hidden rounded-[2rem] shadow-2xl sm:h-[420px] md:h-[500px]">
           <Image
@@ -38,11 +40,15 @@ export function ProblemsSection() {
         </div>
 
         {/* テキストエリア */}
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-6">
           <h2 className="text-3xl font-serif font-light text-foreground">
-            はじめてのハイブランド選び、<br />
-            こんなお悩みや不安はありませんか？
+            「ハイブランドって高すぎる」「初めてで失敗したくない」
+            <br />
+            「でも、ちゃんとしたものが欲しい」
           </h2>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            そんな人のためのサービスです。はじめてのハイブランドを、安心して選べる環境でお届けします。
+          </p>
 
           <div className="grid gap-8">
             {problems.map((problem, index) => {

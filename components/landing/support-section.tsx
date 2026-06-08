@@ -1,26 +1,26 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ShoppingBag, Gem, Search } from "lucide-react"
+import { ShoppingBag, Shield, Sparkles } from "lucide-react"
 
 const supports = [
   {
     icon: ShoppingBag,
-    title: "なぜ「アルマ」が人生最初の1つに選ばれるのか？",
+    title: "手の届く価格",
     description:
-      "ルイ・ヴィトンの数ある名作の中で、1934年の誕生以来、不動のアイコンとして君臨し続けているのが『アルマ』です。ココ・シャネルのオーダーによって生まれたとも言われるこのバッグは、独特の丸みを帯びたエレガントなシルエットが特徴。フォーマルからカジュアルまで完璧にマッチする普遍のデザインです。",
+      "新品よりも現実的な価格で、憧れブランドをもっと身近に。はじめてでも背伸びしすぎないラインナップです。",
   },
   {
-    icon: Gem,
-    title: "絶対に失敗しないための「3つの実用性チェック」",
+    icon: Shield,
+    title: "初心者でも安心",
     description:
-      "本モデルは日常使いに最も便利とされる『PMサイズ』を採用しており、長財布やスマホ、500mlペットボトルまで美しく収まります。キズが非常につきにくく、防水性・耐久性にも優れているため、雨の日でも天候を気にせずガシガシ使えるのが最大の秘密です。",
+      "プロの真贋鑑定済みアイテムだけを厳選。初めてのハイブランド選びでも、不安をしっかり取り除きます。",
   },
   {
-    icon: Search,
-    title: "購入前の小さな疑問を解消する「状態確認サポート」",
+    icon: Sparkles,
+    title: "トレンド重視",
     description:
-      "高額なお買い物だからこそ、一切の妥協や疑問を残したまま購入してほしくありません。「写真のこの部分を拡大して見たい」など、どんな小さな疑問でも遠慮なくお寄せください。Revival.tokyoのスタッフが実際の現物を確認し、丁寧にお答えいたします。",
+      "ヴィトンを中心に、今欲しい人気のバッグ・財布・小物をラインナップ。いまの気分にぴったりの一品を揃えています。",
   },
 ]
 
@@ -59,17 +59,16 @@ export function SupportSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
           <span className="mb-4 inline-block font-serif text-xs tracking-[0.4em] text-primary">
-            SUPPORT
+            SERVICE
           </span>
           <h2 className="font-serif text-2xl font-light leading-relaxed tracking-wide text-foreground md:text-3xl">
-            はじめてのルイ・ヴィトン選びを
+            はじめてでも安心できる
             <br className="md:hidden" />
-            完璧にサポートする3つのコンテンツ
+            3つのサービス特徴
           </h2>
           <div className="mx-auto mt-6 h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent" />
           <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Revival.tokyo（リバイバル・トウキョウ）は、あなたが「いつかは欲しい」と願っていた憧れのブランドを、
-            最高の満足感とともにお手元にお届けするための準備を整えています。
+            価格・信頼・トレンドの3つの軸で、若者の「はじめてハイブランド」をサポートします。
           </p>
         </div>
 

@@ -56,12 +56,12 @@ export function HeroSection() {
             </span>
 
             <h1 className="mb-4 text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              <span className="block text-primary">自分だけの</span>
-              <span className="block text-5xl font-semibold text-foreground md:text-6xl">ルイ・ヴィトンスタイル</span>
+              <span className="block text-primary">憧れを、もっと身近に。</span>
+              <span className="block text-5xl font-semibold text-foreground md:text-6xl">はじめてのハイブランドも、安心して選べる。</span>
             </h1>
 
             <p className="mb-8 max-w-xl text-base leading-relaxed text-slate-600 lg:text-lg">
-              白ベースの洗練された空間に、今っぽいアクセントを。若者の感性を大事にしたヴィンテージバッグを、安心とともにお届けします。
+              厳選されたリユースアイテムを、あなたの毎日に。高価すぎない価格と、はじめてでも安心のサポートで、いま欲しい憧れを手に入れよう。
             </p>
 
             <div className="mb-10 flex flex-wrap justify-center gap-4 lg:justify-start">
@@ -88,7 +88,7 @@ export function HeroSection() {
                 aria-label="コレクションを見る - Revivalのルイ・ヴィトン一覧ページへ移動"
                 className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-4 text-sm font-semibold text-white transition duration-300 hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/30"
               >
-                コレクションを見る
+                今すぐアイテムを見る
               </a>
               <a
                 href="#product"
