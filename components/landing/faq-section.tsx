@@ -72,6 +72,8 @@ export function FaqSection() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
                 className="flex w-full items-start justify-between p-6 text-left"
               >
                 <div className="flex items-start gap-4">
@@ -88,9 +90,12 @@ export function FaqSection() {
               </button>
 
               <div
+                id={`faq-answer-${index}`}
                 className={`grid transition-all duration-300 ${
                   openIndex === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                 }`}
+                role="region"
+                aria-hidden={openIndex !== index}
               >
                 <div className="overflow-hidden">
                   <div className="border-t border-border/30 px-6 pb-6 pt-4">

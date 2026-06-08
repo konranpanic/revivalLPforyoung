@@ -34,13 +34,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
-        
-        {/* 【修正】背景専用の固定レイヤーをbody直下に分離 */}
-        <div className="fixed inset-0 -z-10 luxury-fixed-bg" />
-        
-        {/* コンテンツの背後にあった半透明レイヤーを調整 */}
-        <div className="min-h-screen bg-background/50">
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-background text-foreground`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-primary focus:shadow-md"
+        >
+          メインコンテンツへスキップ
+        </a>
+        <div className="min-h-screen bg-background text-foreground">
           {children}
         </div>
 

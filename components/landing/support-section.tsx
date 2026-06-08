@@ -79,7 +79,7 @@ export function SupportSection() {
               key={index}
               className="support-card group relative opacity-0"
             >
-              <div className="relative h-full overflow-hidden border border-border/50 bg-card p-8 transition-all duration-500 hover:border-primary/30 hover:bg-secondary/30">
+              <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-border/50 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl">
                 {/* Number Badge */}
                 <div className="absolute right-6 top-6 font-serif text-5xl font-light text-primary/10">
                   0{index + 1}

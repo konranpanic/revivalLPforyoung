@@ -26,7 +26,7 @@ export function ProblemsSection() {
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         
         {/* 画像エリア */}
-        <div className="relative h-[500px] w-full overflow-hidden rounded-2xl shadow-2xl">
+        <div className="relative h-[380px] w-full overflow-hidden rounded-[2rem] shadow-2xl sm:h-[420px] md:h-[500px]">
           <img 
             src="/problem-woman.jpg" 
             alt="ブランド選びの不安" 
