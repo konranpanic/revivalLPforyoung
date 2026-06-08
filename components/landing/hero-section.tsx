@@ -55,9 +55,14 @@ export function HeroSection() {
               NEW VINTAGE MOOD
             </span>
 
-            <h1 className="mb-4 text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              <span className="block text-primary">憧れを、もっと身近に。</span>
-              <span className="block text-5xl font-semibold text-foreground md:text-6xl">はじめてのハイブランドも、安心して選べる。</span>
+            <h1 className="mb-6 text-4xl font-extrabold leading-snug tracking-tight text-foreground md:text-6xl lg:text-7xl">
+              <span className="block bg-gradient-to-r from-cyan-400 via-sky-400 to-rose-400 bg-clip-text text-transparent leading-tight">
+                憧れを、もっと身近に。
+              </span>
+              <span className="block mt-2 text-3xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
+                はじめてのハイブランドも、
+                <span className="ml-1 inline-block text-primary underline-offset-4 decoration-2 decoration-primary/30">安心して選べる。</span>
+              </span>
             </h1>
 
             <p className="mb-8 max-w-xl text-base leading-relaxed text-slate-600 lg:text-lg">
