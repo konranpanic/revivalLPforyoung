@@ -72,7 +72,7 @@ export function StyleGuideSection() {
         <div className="grid gap-8 md:grid-cols-3">
           {styles.map((style, index) => (
             <div key={index} className="style-card group opacity-0">
-              <div className="relative h-full overflow-hidden border border-border/50 bg-background/50 backdrop-blur-sm transition-all duration-500 hover:border-primary/30">
+              <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-border/50 bg-white/90 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg">
                 {/* Image Section */}
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
