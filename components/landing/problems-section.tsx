@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image'
 import { AlertCircle, Target, Search } from "lucide-react"
 
 const problems = [
@@ -27,10 +28,12 @@ export function ProblemsSection() {
         
         {/* 画像エリア */}
         <div className="relative h-[380px] w-full overflow-hidden rounded-[2rem] shadow-2xl sm:h-[420px] md:h-[500px]">
-          <img 
-            src="/problem-woman.jpg" 
-            alt="ブランド選びの不安" 
-            className="h-full w-full object-cover"
+          <Image
+            src="/problem-woman.jpg"
+            alt="ブランド選びの不安"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image'
 import { useState, useEffect, useRef } from "react"
 
 const thumbnails = [
@@ -79,11 +80,13 @@ export function ProductSection() {
           {/* Gallery */}
           <div>
             <div className="relative mb-4 overflow-hidden border border-border/50 bg-background/50 backdrop-blur-sm p-4">
-              <div className="aspect-square bg-secondary/30">
-                <img 
-                  src={thumbnails.find((t) => t.id === activeThumb)?.src}
+              <div className="relative aspect-square bg-secondary/30">
+                <Image
+                  src={thumbnails.find((t) => t.id === activeThumb)?.src ?? ''}
                   alt={`ルイ・ヴィトン ${thumbnails.find((t) => t.id === activeThumb)?.label}｜Revival厳選ヴィンテージ`}
-                  className="h-full w-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="absolute left-0 top-0 h-8 w-8 border-l border-t border-primary/30" />
@@ -101,7 +104,15 @@ export function ProductSection() {
                       : "border-border/50 hover:border-primary/50"
                   }`}
                 >
-                  <img src={thumb.src} alt={`ルイ・ヴィトン ${thumb.label} - Revival厳選個体`} className="h-full w-full object-cover" />
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={thumb.src}
+                      alt={`ルイ・ヴィトン ${thumb.label} - Revival厳選個体`}
+                      fill
+                      className="object-cover"
+                      sizes="100vw"
+                    />
+                  </div>
                 </button>
               ))}
             </div>
